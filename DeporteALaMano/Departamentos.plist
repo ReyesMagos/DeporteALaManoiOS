@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Amazonas</string>
+	<string>Antioquia</string>
+	<string>Arauca</string>
+	<string>Atlantico</string>
+	<string>Bolívar</string>
+	<string>Bogota d.c.</string>
+	<string>Boyacá</string>
+	<string>Caldas</string>
+	<string>Caquetá</string>
+	<string>Casanare</string>
+	<string>Cauca</string>
+	<string>Cesar</string>
+	<string>Chocó</string>
+	<string>Cordoba</string>
+	<string>Cundinamarca</string>
+	<string>Guainía</string>
+	<string>Guaviare</string>
+	<string>Huila</string>
+	<string>La Guajira</string>
+	<string>Magdalena</string>
+	<string>Meta</string>
+	<string>Nariño</string>
+	<string>Norte de Santander</string>
+	<string>Putumayo</string>
+	<string>Risaralda</string>
+	<string>San Andrés y Providencia</string>
+	<string>Santander</string>
+	<string>Sucre</string>
+	<string>Tolima</string>
+	<string>Valle del Cauca</string>
+	<string>Vaupés</string>
+	<string>Vichada</string>
+</array>
+</plist>
