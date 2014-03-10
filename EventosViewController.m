@@ -510,6 +510,30 @@
     [pickerView removeFromSuperview];
 }
 
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel * txtLabel = (UILabel*)view;
+    if (!txtLabel) {
+        txtLabel = [[UILabel alloc]init];
+        txtLabel.font = [UIFont systemFontOfSize:15];
+        txtLabel.lineBreakMode = UILineBreakModeWordWrap;
+        
+        CGRect frameaux = txtLabel.frame;
+        frameaux.size.height = 60;
+        txtLabel.frame = frameaux;
+        
+        txtLabel.numberOfLines = 0;
+        txtLabel.backgroundColor = [UIColor clearColor];
+    }
+    if (pickerView.tag == 1) {
+        txtLabel.text = [eveDepartamentos objectAtIndex:row];
+    }else if(pickerView.tag == 2){
+        txtLabel.text = [eveMunicipios objectAtIndex:row];
+    }else{
+        txtLabel.text = [eveEventos objectAtIndex:row];
+    }
+    return txtLabel;
+}
+
 #pragma marl - UIAlertView delegate
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

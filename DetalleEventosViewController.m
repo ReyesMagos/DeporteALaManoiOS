@@ -101,6 +101,10 @@
         cell.lugarEvento.text = [ind entidad];
         cell.fechaEvento.text = [ind fechadesde];
     }else{
+        cell.nombreEvento.numberOfLines = 0;
+        cell.nombreEvento.lineBreakMode = UILineBreakModeWordWrap;
+        cell.lugarEvento.numberOfLines = 0;
+        cell.lugarEvento.lineBreakMode = UILineBreakModeWordWrap;
         cell.nombreEvento.text = [ind nombre];
         cell.lugarEvento.text = [ind entidad];
         cell.fechaEvento.text = [ind fechadesde];

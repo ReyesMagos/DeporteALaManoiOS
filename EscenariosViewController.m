@@ -337,6 +337,28 @@
     [pickerView removeFromSuperview];
 }
 
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel * txtLabel = (UILabel*)view;
+    if (!txtLabel) {
+        txtLabel = [[UILabel alloc]init];
+        txtLabel.font = [UIFont systemFontOfSize:15];
+        txtLabel.lineBreakMode = UILineBreakModeWordWrap;
+        
+        CGRect frameaux = txtLabel.frame;
+        frameaux.size.height = 60;
+        txtLabel.frame = frameaux;
+        
+        txtLabel.numberOfLines = 0;
+        txtLabel.backgroundColor = [UIColor clearColor];
+    }
+    if (pickerView.tag == 1) {
+        txtLabel.text = [esceMunicipios objectAtIndex:row];
+    }else{
+        txtLabel.text = [escenariosfiltrados objectAtIndex:row];
+    }
+    return txtLabel;
+}
+
 #pragma mark UITextFieldDelegate methods
 
 -(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{

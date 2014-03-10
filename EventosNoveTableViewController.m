@@ -97,6 +97,9 @@
     NSDate * fechaPrimero = [calendarioActual dateFromComponents:comp];
     primerDiaMes = [formato stringFromDate:fechaPrimero];
     
+    primerDiaMes = @"01/10/2013";
+    
+    
     NSDateComponents * componen = [[NSDateComponents alloc]init];
     
     
@@ -127,7 +130,6 @@
 
 -(void)consumaJson{
     NSMutableString* completo = [NSMutableString stringWithFormat:@"http://servicedatosabiertoscolombia.cloudapp.net/v1/coldeportes/consolidadoeventos?$orderby=fechadesde asc&$filter=fechadesde eq '%@'", [posiblesFechas objectAtIndex:0]];
-    
     for (int i = 1; i< [posiblesFechas count]; i++) {
         NSString* aux =[NSString stringWithFormat: @" or fechadesde eq '%@'", [posiblesFechas objectAtIndex:i]];
         [completo appendString:aux];
